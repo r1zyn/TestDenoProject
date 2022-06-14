@@ -1,0 +1,81 @@
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"checkJs": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitAny": false,
+		"noImplicitOverride": true,
+		"noImplicitReturns": false,
+		"noImplicitThis": false,
+		"noImplicitUseStrict": false,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"strict": true,
+		"experimentalDecorators": true,
+		"lib": [
+			"deno.window"
+		]
+	},
+	"fmt": {
+		"files": {
+			"include": [
+				"./src/**/*",
+				"./.vscode/**/*"
+			]
+		},
+		"options": {
+			"indentWidth": 4,
+			"singleQuote": false,
+			"useTabs": true
+		}
+	},
+	"lint": {
+		"files": {
+			"include": [
+				"./src/**/*"
+			],
+			"exclude": [
+				"./.vscode/**/*"
+			]
+		},
+		"rules": {
+			"tags": ["recommended"],
+			"include": [
+				"comma-spacing",
+				"comma-style",
+				"curly",
+				"dot-location",
+				"keyboard-spacing",
+				"max-nested-callbacks",
+				"max-statements-per-line",
+				"no-empty-function",
+				"no-floating-decimal",
+				"no-lonely-if",
+				"no-multi-spaces",
+				"no-multiple-empty-lines",
+				"no-undef",
+				"no-var",
+				"object-curly-spacing",
+				"prefer-const",
+				"quotes",
+				"semi",
+				"space-before-blocks",
+				"space-before-function-paren",
+				"space-in-parens",
+				"space-infix-ops",
+				"space-unary-ops",
+				"spaced-comment",
+				"yoda"
+			]
+		}
+	},
+	"tasks": {
+		"fmt": "deno fmt .",
+		"lint": "deno lint .",
+		"test": "deno test index_test.ts --allow-net",
+		"main": "deno run index.ts"
+	}
+}
