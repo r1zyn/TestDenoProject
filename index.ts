@@ -1,3 +1,7 @@
+import { capitalize } from "https://raw.githubusercontent.com/unkn0wnF/AsturaWebsite/master/lib/utils.ts";
+
+console.log(capitalize("this is a capitalized string using a function from an external source"));
+
 const url: string = Deno.args[0] || "https://github.com/";
 url === "https://github.com/"
 	? console.warn(`No URL provided, using default URL of ${url}`)
